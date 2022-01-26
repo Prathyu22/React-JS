@@ -1,0 +1,28 @@
+React ---> (Open Source) implements the virtual DOM. ---> Creates the copy of DOM.
+
+Virual DOM is the representation/state of the actual DOM.
+
+Instead of modifiying the DOM, React makes the new version of DOM and it calculates the change.
+Everytime we make a change, React updates the change and makes the new version of it by storing previous data too.
+
+Faster Method :
+--> Modifying the virtual DOM or updating the DOM directly ???
+*** Calc./Finding the change between two states is easy that is done by React. ***
+
+**** Virtual DOM is not fast in updating but fast in calc. the difference between 2 states that means the change b/w states. ***
+
+#### Immutable ####
+----> Virtual DOM is immutable. 
+----> It cannot be updated and hence it creates another version of it.
+
+We need different set of APIs to modify the virtual DOM.
+                --------> These APIs are provided by the React.
+
+******* (Reason of two links in index.html)
+The React DOM is the actual link b/w DOM and virtual DOM.
+The APIs to update the actual DOM (DOM) from virtual DOM are provided via REACT DOM Lib.
+React has the APIs that have methods to modify the virtual DOM.
+*******
+
+React Js ---> For Browsers. (In thsi we are using React JS)
+React Native ---> App Developers.
