@@ -1,0 +1,3 @@
+We cannot have several elements so we can nest elements in React.
+They cannot be multiple parents.
+In React, no "class" keyword is used.
