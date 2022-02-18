@@ -8,7 +8,7 @@ function App() {
     width:"200px",
     border:"10px solid black"
   }
-
+  
   return (
     <div className="App">
       <nav>
