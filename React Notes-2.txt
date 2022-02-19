@@ -1,9 +1,2 @@
-/*---------------------LIFECYCLE METHODS IN REACT---------------*/
-1. The process that component is visible to the user --> MOUNTING
-        --->Whenever the componenet is displayed on the DOM for the first time 
-        ---> 2 METHODS
-            
-
-2. Whenever the prop is changed, the component rerenders ---> UPDATING
-
-3. UNMOUNTING (deleting the component)
+mysteryFunction() ---> React just registers the state change.
+                  ---> It has by default one parameter i.e., "previousValue".
