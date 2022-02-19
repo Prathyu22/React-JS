@@ -1,2 +1,7 @@
-mysteryFunction() ---> React just registers the state change.
-                  ---> It has by default one parameter i.e., "previousValue".
+useEffect() ---> It has 2 parameters
+            ---> 1. Functions that are going to run
+                 2. Dependencies.
+            --->Hook, that allows hook into the function.
+            ---> If we give empty array, we can see only one mount.
+
+setContent() ---> Everytime we come across this, we rerender the element.

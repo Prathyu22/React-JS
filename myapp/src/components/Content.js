@@ -1,38 +1,26 @@
 
-import {useState} from 'react'
+import {useState, useEffect} from 'react';
 const Content = () => {
-   
-    const [items, setItems] = useState([])
-    const [value, setValue] = useState('')
-
-    const handleSubmit = () => {
-        setItems(prev => [...prev,value]) 
-        setValue('')
-    }
-
-    const handleInput = (e) => {
-        setValue(e.target.value)
-    }
+    const [counter,setCounter] = useState(0)
+    const [content,setContent] = useState([])
     
-    const handleDelete = (item) => {
-        console.log(item)
-        setItems(prev => prev.filter(i => i !== item))
+    const APICall = async () => {
+        const res = await fetch('https://jsonplaceholder.typicode.com/photos')
+        const data = await res.json()
+        setContent(data)
     }
 
+    useEffect( () => {
+        APICall()
+    }, [counter]) //Everytime we click on CLICK ME, we just make one APICall... This makes memory management... We can also have empty array here so that we can have only one APICall.
     return (
-        <>
-          <h2>ToDo</h2>
-          <form>
-            <input value={value} onChange={handleInput} type="text" />
-            <button onClick={handleSubmit} type="submit">ADD</button>
-          </form>
-          <ul>
-              {items.map(item => <li>{item} <button onClick = { () => { 
-                  handleDelete(item)
-              }} >DELETE </button> </li>)}
-          </ul>
-        </>
-    );
+        <div>
+             <h2>{counter}</h2>
+            <button onClick= { () => {setCounter(previousValue => previousValue + 1)}} >CLICK ME </button> 
+            <ul>
+                {content.map(item => <li style={{margin: "10px", border: "3px solid violet"}} >{item.title}</li>)}
+            </ul>
+        </div>);
 }
 
 export default Content;  
