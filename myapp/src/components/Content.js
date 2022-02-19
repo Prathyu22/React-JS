@@ -1,50 +1,30 @@
-import ListItem from './ListItem'
+
 import {useState} from 'react'
-import {render} from "react-dom";
 const Content = () => {
-   //Let counter = 0
-    let [counter,setCounter] = useState(0)
-    //console.log(counter)
-    //console.log(mysteryFunction)
-    console.log("rerender")
+   
+    const [items, setItems] = useState([])
+    const [value, setValue] = useState('')
+
+    const handleSubmit = () => {
+        setItems(prev => [...prev,value]) 
+    }
+
+    const handleInput = (e) => {
+        setValue(e.target.value)
+    }
+
     return (
-        <div className="container">
-             <h2>{counter}</h2>
-            <button onClick= { () => {
-                //console.log('BUTTON CLICKED')
-                //counter = counter + 1
-                setCounter(previousValue => previousValue + 1)
-            }} >CLICK ME </button> 
-        </div>
+        <>
+          <h2>ToDo</h2>
+          <form>
+            <input onChange={handleInput} type="text" />
+            <button onClick={handleSubmit} type="submit">ADD</button>
+          </form>
+          <ul>
+              {items.map(item => <li>{item}</li>)}
+          </ul>
+        </>
     );
 }
 
 export default Content;  
-
-/*import React from "react";
-
-class Content extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            count: 0
-        };
-    }
-
-    render() {
-        return (
-            <div className="container">
-            {/*
-            <h2>{counter}</h2>
-            <button onClick= { () => {
-                console.log('BUTTON CLICKED')
-                counter = counter + 1
-            }} >CLICK ME </button>
-            */
-            /*Lorem ipsum dolor sit amet 
-            </div>
-        )
-    }
-}
-
-export default Content;*/

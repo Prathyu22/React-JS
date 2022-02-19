@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            <a href="a">GitHub</a>
+            <a href="a"></a>
         </footer>
     );
 }
