@@ -1,8 +1,9 @@
-We cannot have several elements so we can nest elements in React.
-They cannot be multiple parents.
-In React, no "class" keyword is used.
+/*---------------------LIFECYCLE METHODS IN REACT---------------*/
+1. The process that component is visible to the user --> MOUNTING
+        --->Whenever the componenet is displayed on the DOM for the first time 
+        ---> 2 METHODS
+            
 
-forEach() ----> Donot return anything.
-          ----> Therefore we use "map()"
+2. Whenever the prop is changed, the component rerenders ---> UPDATING
 
-*** sfc ---> shortcut to create function component.
+3. UNMOUNTING (deleting the component)
