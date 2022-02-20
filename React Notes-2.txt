@@ -1,7 +1,4 @@
-useEffect() ---> It has 2 parameters
-            ---> 1. Functions that are going to run
-                 2. Dependencies.
-            --->Hook, that allows hook into the function.
-            ---> If we give empty array, we can see only one mount.
+React component should always return something.
+React can always keep track of changes on Props/states but not on variables.
 
-setContent() ---> Everytime we come across this, we rerender the element.
+UNMOUNTED ---> If we shift from one component to other, the first clicked component gets unmounted.
